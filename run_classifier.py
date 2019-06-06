@@ -191,10 +191,11 @@ class DataProcessor(object):
             for line in reader:
                 lines.append(line)
             return lines
-     @classmethod 
-     def _read_json(cls, input_file, quotechar=None):
+        
+    @classmethod 
+    def _read_json(cls, input_file, quotechar=None):
         """Reads a json separated value file."""
-        with Open(input_file, "r") as f:
+        with open(input_file, "r") as f:
           reader=json.load(f)
           #reader = csv.reader(f, delimiter="\t", quotechar=quotechar)
           lines = []
